@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
-    <title>Ryne's Bachelor Party</title>
+    <!-- if you find this comment, you are a ~neat guy~-->
+    <title>Ryne's Parking Lot Party</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="apple-touch-icon" href="./photos/ryne.jpg">
 
@@ -11,11 +12,11 @@
 
 <style>
     table {
-      border-collapse: collapse;
       border-spacing: 0;
       width: 100%;
       border: 1px solid #ddd;
       white-space: nowrap;
+      overflow-x: auto;
     }
     
     th, td {
@@ -24,33 +25,108 @@
     }
     
     tr:nth-child(even){background-color: #f2f2f2}
-    </style>
 
-</html>
+    table.modal-table {
+        white-space:normal
+    }
 
-    <table>
-        <h2>COMMUNICATION</h2>
-        <tr>
-            <th>
-                Use the god damn groupme. We're not Cardinals fans.
-            </th>
-        </tr>
-    </table>
+    /* The Modal (background) */
+    .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
 
-    <table>
-        <h2>HOUSE ADDRESS</h2>
-        <tr>
-            <th>
-                <a target="_blank" href="https://www.google.com/maps/place/607+27th+Ave+N,+Nashville,+TN+37209">607 27th Ave N, Nashville, TN 37209</a>
-            </th>
-        </tr>
-    </table>
+    /* Modal Content/Box */
+    .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    }
+
+    /* The Close Button */
+    .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    }    
+</style>
+
+<script>
+
+
+    function showTopGolfGroups() {
+        document.getElementById("topGolfModal").style.display = "block";
+    }
+
+    function closeTopGolfModal() {
+        document.getElementById("topGolfModal").style.display = "none";
+    }
+
+    function showWhiskeyTourModal() {
+        document.getElementById("whiskeyTourModal").style.display = "block";
+    }
+
+    function closeWhiskeyTourModal() {
+        document.getElementById("whiskeyTourModal").style.display = "none";
+    }
+
+
+</script>
+
+   <h2>HOUSE</h2>
+   <div style="overflow-x:auto;">
+        <table>
+            
+            <tr>
+                <th>
+                    <a target="_blank" href="https://www.google.com/maps/place/607+27th+Ave+N,+Nashville,+TN+37209">607 27th Ave N, Nashville, TN 37209</a>
+                </th>
+                <td>
+                    Check GroupMe for house code & garage code
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Wifi Network
+                </td>
+                <td>
+                    Unit 607
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Wifi Password
+                </td>
+                <td>
+                    Nash607!
+                </td>
+            </tr>
+        </table>
+    </div>
 
     <div style="overflow-x:auto;">
         <table>
             <tbody>
                 <h2>SCHEDULE</h2>
-                <th>
+                <th colspan="2">
                     Thursday, April 29
                 </th>
 
@@ -64,7 +140,7 @@
                     
                 </tr>     
 
-                <th>
+                <th colspan="2">
                     Friday, April 30
                 </th>
 
@@ -81,7 +157,7 @@
                         2:00 PM - 5:00 PM
                     </td>
                     <td>
-                        Top Golf
+                        <button onClick="showTopGolfGroups()">Top Golf</button>
                     </td>
                 </tr>
                 <tr>
@@ -93,7 +169,7 @@
                     </td>
                 </tr>
 
-                <th>
+                <th colspan="2">
                     Saturday, May 1
                 </th>
 
@@ -111,7 +187,7 @@
                         1:00PM - 3:00PM
                     </td>
                     <td>
-                        Whiskey Tours @ Corsair
+                        <button onClick="showWhiskeyTourModal()">Whiskey Tours @ Corsair</button>
                     </td>
                 </tr>
 
@@ -124,11 +200,11 @@
                     </td>
                 </tr>
 
-                <tr>
-                    <th>
-                        Sunday, May 2
-                    </th>
-                </tr>
+                
+                <th colspan="2">
+                    Sunday, May 2
+                </th>
+                
                 <tr>
                     <td>
                         10:00 AM
@@ -139,6 +215,92 @@
                 </tr>
             </tbody>
         </table>
+    </div>
+
+
+<div id="topGolfModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close" onclick="closeTopGolfModal()">&times;</span>
+    <a href="https://topgolf.com/us/nashville/" target = "_blank">Top Golf</a>
+    <table class="modal-table">
+        <tr>
+            <th>
+                Team
+            </th>
+            <th>
+                Members
+            </th>
+        </tr>
+        <tr>
+            <td>
+                Packers
+            </td>
+            <td>
+                Ryne, Nick, Scott, Joel
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Hawkeyes
+            </td>
+            <td>
+                Phil, Eric, Sam, Tryg
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Cubs
+            </td>
+            <td>
+                Nate, Travis, Peter, Stanfa, Olson
+            </td>
+        </tr>
+    </table>
+  </div>
+
+</div>
+
+<div id="whiskeyTourModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close" onclick="closeWhiskeyTourModal()">&times;</span>
+        <a href="https://www.corsairdistillery.com/marathon/" target="_blank">Coursair Whiskey Tour</a>
+        <br/>
+        <br/>
+        <a href="https://www.google.com/maps/place/1200+Clinton+Street+%23110+Nashville,+TN+37203">1200 Clinton Street #110, Nashville, TN 37203</a>
+        <br/>
+        <br/>
+        <table class="modal-table">
+            <tr>
+                <th>
+                    Group
+                </th>
+                <th>
+                    Members
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    Ryne, Nate, Travis, Phil, Eric, Scott, Peter
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    2
+                </td>
+                <td>
+                    Nick, Sam, Tryg, Joel, Stanfa, Olson
+                </td>
+            </tr>
+        </table>
+    </div>
+
     </div>
 
 </html>
