@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<head>
+    <!-- if you find this comment, you are a ~neat guy~-->
+    <title>Dean's Kind Parade</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="./photos/dean.jpg">
+
+    <meta name="mobile-web-app-capable" content="yes">    
+
+    <link rel="shortcut icon" sizes="196x196" href="./photos/dean.jpg">
+</head>
+
+<style>
+    table {
+      border-spacing: 0;
+      width: 100%;
+      border: 1px solid #ddd;
+      white-space: nowrap;
+      overflow-x: auto;
+    }
+    
+    th, td {
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even){background-color: #f2f2f2}
+
+    table.modal-table {
+        white-space:normal
+    }
+
+    /* The Modal (background) */
+    .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    }
+
+    /* The Close Button */
+    .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    }    
+</style>
+
+<script>
+
+
+    function showGolfGroups() {
+        document.getElementById("golfModal").style.display = "block";
+    }
+
+    function closeGolfGroups() {
+        document.getElementById("golfModal").style.display = "none";
+    }
+
+    function showBoatingModal() {
+        document.getElementById("boatingModal").style.display = "block";
+    }
+
+    function closeBoatingModal() {
+        document.getElementById("boatingModal").style.display = "none";
+    }
+
+</script>
+
+   <h2>HOUSE</h2>
+   <div style="overflow-x:auto;">
+        <table>
+            
+            <tr>
+                <th>
+                    <a target="_blank" href="https://goo.gl/maps/gbQrFVMC9rygnrsA8">239 Deep Forest, Hollister, MO 65672</a>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    Wifi Network
+                </td>
+                <td>
+                    TBD
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Wifi Password
+                </td>
+                <td>
+                    TBD
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div style="overflow-x:auto;">
+        <table>
+            <tbody>
+                <h2>SCHEDULE</h2>
+                <th colspan="2">
+                    Thursday, May 20
+                </th>
+
+                <tr>
+                    <td>
+                        2:00 PM
+                    </td>
+                    <td>
+                        check in
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td>
+                        Evening
+                    </td>
+                    <td>
+                        Hang out at the house, grill, drink, play games, etc.
+                    </td>
+                    
+                </tr>         
+
+                <th colspan="2">
+                    Friday, May 21
+                </th>
+
+                <tr>
+                    <td>
+                        10am - 3pm
+                    </td>
+                    <td>
+                        <button onClick="showGolfGroups()">Golf</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Nighttime
+                    </td>
+                    <td>
+                        Chili's for dinner, hang out at the house, hit up some bars, perhaps?
+                    </td>
+                </tr>
+
+                <th colspan="2">
+                    Saturday, May 22
+                </th>
+
+                <tr>
+                    <td>
+                        All Day (ish)
+                    </td>
+                    <td>
+                        <button onClick="showBoatingModal()">Boating</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Evening
+                    </td>
+                    <td>
+                        Grill and hang out
+                    </td>
+                </tr>
+                
+                <th colspan="2">
+                    Sunday, May 2
+                </th>
+                
+                <tr>
+                    <td>
+                        10:00 AM
+                    </td>
+                    <td>
+                        Checkout
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Late Breakfast/Early Lunch
+                    </td>
+                    <td>
+                        <a href="https://locations.wafflehouse.com/shop/179049/Waffle-House-1431" target="_blank">This Waffle House</a> in Springfield, if you're able
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>CONTACTS</h2>
+   <div style="overflow-x:auto;">
+        <table>
+            <a href = "mailto:stanfa.michael.com?subject=Add My Contact Info">Ask Stanfa to add your name below</a><br><br>
+            <tr>
+                <td>
+                    Name
+                </td>
+                <td>
+                    Number
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Michael Stanfa
+                </td>
+                <td>
+                    (630) 207-7921
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+<div id="golfModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close" onclick="closeGolfGroups()">&times;</span>
+    <a href="https://www.bransonhillsgolfclub.com/" target = "_blank">Branson Hills Golf Club</a>
+    <table class="modal-table">
+        <tr>
+            <th>
+                Time
+            </th>
+            <th>
+                Golfers
+            </th>
+        </tr>
+        <tr>
+            <td>
+                10:50
+            </td>
+            <td>
+                Craig, Olson, Stanfa, Thompson
+            </td>
+        </tr>
+        <tr>
+            <td>
+                11:00
+            </td>
+            <td>
+                Cole, Mike Howard, Cartmell, Petit
+            </td>
+        </tr>
+        <tr>
+            <td>
+                11:10
+            </td>
+            <td>
+                Willy, Brad, Brian, Cam
+            </td>
+        </tr>
+        <tr>
+            <td>
+                11:20
+            </td>
+            <td>
+                John, Kelly, Dean, Patrick
+            </td>
+        </tr>
+    </table>
+  </div>
+</div>
+
+<div id="boatingModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" onclick="closeBoatingModal()">&times;</span>
+      <p>Thompson and Stanfa will be the primary boat drivers. Please do as they ask when on the boat. We're here to make sure everybody has fun in a SAFE way. Thanks in advance!</p>
+      
+      <p>In the morning, Cole, Thompson, and Stanfa will drive to the boat rental place when we're ready to pick up the boats. We'll bring coolers and snacks. Everybody else can walk to the <a href="https://goo.gl/maps/UuUVgFPyDE9NhJCE9" target="_blank">Clevinger Cove Boat Launch</a>, where we'll pick you up. We'll boat around, probably find a place to anchor, and hang out on the boats. Drink beer, eat snacks, swim, etc.</p>
+    </div>
+  </div>
+
+</html>
